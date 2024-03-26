@@ -73,3 +73,13 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Steps
+
+- [x] Tailwind CSS
+- [x] PrimeVue
+- [x] Components
+- [x] Pages
+- [ ] Layouts
+- [ ] Pinia
+- [ ] Vitest
