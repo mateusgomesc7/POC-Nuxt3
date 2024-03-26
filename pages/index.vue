@@ -11,7 +11,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
                 quas!
             </p>
-            <NuxtLink to="/login"><Button label="login" link/></NuxtLink>
+            <NuxtLink :to="`/login/${param}`"><Button label="login" link/></NuxtLink>
         </template>
         <template #footer>
             <div class="flex gap-3 mt-1">
@@ -26,4 +26,8 @@
 definePageMeta({
   middleware: 'auth'
 })
+import { ref } from "vue";
+
+const param = ref("route param");
 </script>
+
