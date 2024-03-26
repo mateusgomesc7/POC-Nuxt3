@@ -9,5 +9,8 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'custom'
+})
 import CardLogin from '~/components/CardLogin.vue';
 </script>

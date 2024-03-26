@@ -78,8 +78,9 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 - [x] Tailwind CSS
 - [x] PrimeVue
+- [x] PrimeIcons
 - [x] Components
-- [x] Pages
-- [ ] Layouts
+- [x] Pages 
+- [x] Layouts
 - [ ] Pinia
 - [ ] Vitest

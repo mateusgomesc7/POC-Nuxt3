@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     'nuxt-primevue',
   ],
   css: [
-    '~/assets/css/base.css',
+    'primeicons/primeicons.css',
+    '@/assets/css/base.css'
   ],
   primevue: {
     options: {
