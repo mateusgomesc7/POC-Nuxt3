@@ -44,18 +44,21 @@
       </template>
     </Card>
     <p>{{ store.count }}</p>
+    <CardBirthday />
   </div>
 </template>
 
 <script setup lang="ts">
+import CardBirthday from '@/components/CardBirthday.vue'
+import { useCounterStore } from '@/stores/counter'
+import { ref } from "vue";
+
 definePageMeta({
   middleware: 'auth',
   layout: 'custom'
 })
-import { ref } from "vue";
 
 const param = ref("route param");
-import { useCounterStore } from '@/stores/counter'
 const store = useCounterStore()
 </script>
 
