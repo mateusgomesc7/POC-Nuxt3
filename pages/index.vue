@@ -26,7 +26,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'auth'
+  middleware: 'auth',
+  layout: 'custom'
 })
 import { ref } from "vue";
 
