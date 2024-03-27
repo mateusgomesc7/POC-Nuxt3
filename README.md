@@ -87,7 +87,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [ ] composables
 - [ ] plugins
 - [ ] assets vs public
-- [ ] Data fetching
+- [x] Data fetching
 - [ ] Pinia
 - [ ] ESLint
 - [ ] Vitest
