@@ -84,5 +84,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] Layouts
 - [x] Middleware
 - [x] Routes
+- [ ] Data fetching
 - [ ] Pinia
 - [ ] Vitest
