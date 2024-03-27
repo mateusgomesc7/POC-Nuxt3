@@ -3,7 +3,12 @@
     <h1>Welcome to the login page</h1>
     <CardLogin>
       This is an auto-imported component.
-      <NuxtLink to="/" class="bg-red-300">Index</NuxtLink>
+      <NuxtLink
+        to="/"
+        class="bg-red-300"
+      >
+        Index
+      </NuxtLink>
     </CardLogin>
     <p>{{ count }}</p>
   </div>

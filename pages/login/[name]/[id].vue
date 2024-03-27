@@ -1,13 +1,13 @@
 <template>
-    <div>
-      <h1>Welcome to the login page</h1>
-      <CardLogin>
-        LOGIN/NAME/ID
-        ROUTE NAME: {{ name }}
-        ROUTE ID: {{ id }}
-      </CardLogin>
-    </div>
-  </template>
+  <div>
+    <h1>Welcome to the login page</h1>
+    <CardLogin>
+      LOGIN/NAME/ID
+      ROUTE NAME: {{ name }}
+      ROUTE ID: {{ id }}
+    </CardLogin>
+  </div>
+</template>
   
   <script setup>
   

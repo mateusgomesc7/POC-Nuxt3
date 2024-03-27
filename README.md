@@ -88,6 +88,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [ ] plugins
 - [ ] assets vs public
 - [x] Data fetching
-- [ ] Pinia
-- [ ] ESLint
+- [x] Pinia
+- [x] ESLint
 - [ ] Vitest
