@@ -15,11 +15,13 @@
         </template>
         <template #footer>
             <div class="flex gap-3 mt-1">
-                <Button label="Cancel" severity="secondary" outlined class="w-full" />
-                <Button label="Save" class="w-full" />
+                <Button label="Cancel" severity="secondary" outlined class="w-full" @click="console.log(store.doubleCount)"/>
+                <Button label="Save" class="w-full" @click="store.increment"/>
             </div>
         </template>
+        
     </Card>
+    <p>{{ store.count }}</p>
 </template>
 
 <script setup lang="ts">
@@ -29,5 +31,7 @@ definePageMeta({
 import { ref } from "vue";
 
 const param = ref("route param");
+import { useCounterStore } from '@/stores/counter'
+const store = useCounterStore()
 </script>
 
