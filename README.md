@@ -85,7 +85,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] Middleware
 - [x] Routes
 - [x] composables
-- [ ] plugins
+- [x] plugins
 - [ ] assets vs public
 - [x] Data fetching
 - [x] Pinia
