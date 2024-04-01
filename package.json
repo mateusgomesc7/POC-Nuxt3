@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/i18n": "^8.0.0",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "eslint": "^8.57.0",
     "nuxt-primevue": "^0.3.1"

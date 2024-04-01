@@ -1,6 +1,7 @@
 
 <template>
   <div>
+    <h1>{{ $t('welcome') }}</h1>
     <Card style="width: 25rem; overflow: hidden">
       <template #header>
         <img

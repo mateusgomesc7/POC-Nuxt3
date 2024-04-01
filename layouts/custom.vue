@@ -42,6 +42,7 @@
 
 <script setup>
 import { ref } from "vue";
+const { locale } = useI18n();
 
 const items = ref([
     {
@@ -59,5 +60,21 @@ const items = ref([
         icon: 'pi pi pi-pencil',
         route: '/products'
     },
+    {
+        label: 'Languages',
+        icon: 'pi pi-fw pi-pencil',
+        items: [
+            {
+                label: 'English',
+                icon: 'pi pi-fw pi-pencil',
+                command: () => locale.value = 'en'
+            },
+            {
+                label: 'Portugues',
+                icon: 'pi pi-fw pi-pencil',
+                command: () => locale.value = 'ptbr'
+            }
+        ]
+    }
 ]);
 </script>

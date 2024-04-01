@@ -8,11 +8,15 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-primevue',
     '@pinia/nuxt',
+    '@nuxtjs/i18n',
   ],
   css: [
     'primeicons/primeicons.css',
     '@/assets/css/base.css'
   ],
+  i18n: {
+    vueI18n: '~/i18n/i18n.config.ts'
+  },
   primevue: {
     options: {
       unstyled: true

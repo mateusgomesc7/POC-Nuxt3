@@ -84,10 +84,11 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] Layouts
 - [x] Middleware
 - [x] Routes
-- [x] composables
-- [x] plugins
-- [ ] assets vs public
+- [x] Composables
+- [x] Plugins
+- [x] Assets vs Public
 - [x] Data fetching
 - [x] Pinia
 - [x] ESLint
+- [x] i18n
 - [ ] Vitest
