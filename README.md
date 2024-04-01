@@ -92,3 +92,11 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [x] ESLint
 - [x] i18n
 - [ ] Vitest
+  - [ ] Component Methods
+  - [ ] Lifecycle Hooks
+  - [ ] Composables
+  - [ ] Utils
+  - [ ] Stores
+  - [ ] Middlewares
+  - [ ] Computed
+  - [ ] Watch
