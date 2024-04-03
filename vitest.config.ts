@@ -11,5 +11,19 @@ export default defineVitestConfig({
         domEnvironment: "jsdom",
       },
     },
+    coverage: {
+      provider: "v8",
+      enabled: true,
+      include: [
+        "components/**",
+        "composables/**",
+        "layouts/**",
+        "middleware/**",
+        "pages/**",
+        "plugins/**",
+        "utils/**",
+        "store/**",
+      ],
+    },
   },
 });
