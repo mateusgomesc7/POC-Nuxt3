@@ -97,6 +97,6 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
   - [ ] Composables
   - [ ] Utils
   - [ ] Stores
-  - [ ] Middlewares
+  - [x] Middlewares
   - [ ] Computed
   - [ ] Watch
