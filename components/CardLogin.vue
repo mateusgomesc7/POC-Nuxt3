@@ -1,7 +1,7 @@
 <template>
   <Card class="max-w-sm">
     <template #title>
-      Card Login
+      {{ $t('component.card_login.login_btn') }}
     </template>
     <template #content>
       <slot />

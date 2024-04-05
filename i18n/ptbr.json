@@ -1,5 +1,10 @@
 {
-    "ptbr": {
-        "welcome": "Bem vindo"
+  "ptbr": {
+    "welcome": "Bem vindo",
+    "component": {
+      "card_login": {
+        "login_btn": "Login"
+      }
     }
+  }
 }

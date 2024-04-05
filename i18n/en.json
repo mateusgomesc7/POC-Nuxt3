@@ -1,5 +1,10 @@
 {
-    "en": {
-        "welcome": "Welcome"
+  "en": {
+    "welcome": "Welcome",
+    "component": {
+      "card_login": {
+        "login_btn": "Login"
+      }
     }
+  }
 }
