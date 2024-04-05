@@ -16,11 +16,11 @@ describe("Composables useFormatation", () => {
   });
 
   it("should return the number of days to my birthday", () => {
-    const date = new Date(2024, 1, 1, 1);
+    const date = new Date(2024, 1, 1);
     vi.setSystemTime(date);
 
     const birthday = "2024-03-25";
     const result = daysToBirthday(birthday);
-    expect(result).toBe(53);
+    expect(result).toEqual(53);
   });
 });

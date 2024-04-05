@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest --run --coverage",
+    "test": "vitest --run --reporter=verbose --coverage",
     "test:ui": "vitest --ui"
   },
   "dependencies": {
