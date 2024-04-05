@@ -8,7 +8,7 @@
     </template>
     <template #footer>
       <Button
-        id="btn-login"
+        id="login-btn"
         label="Login"
         type="button"
         class="w-full"
