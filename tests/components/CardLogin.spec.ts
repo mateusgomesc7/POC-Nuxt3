@@ -12,7 +12,7 @@ describe("CardLogin", () => {
   it("#incrementBadge - Should increment badge on click", async () => {
     const wrapper = await mountSuspended(CardLogin);
 
-    const button = wrapper.find("#btn-login");
+    const button = wrapper.find("#login-btn");
     await button.trigger("click");
 
     expect((wrapper.vm as any).badge.value).toEqual(1);
