@@ -60,7 +60,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 - [ ] Vitest
   - [x] Component Methods
   - [ ] Lifecycle Hooks
-  - [ ] Composables
+  - [x] Composables
   - [ ] Utils
   - [ ] Stores
   - [x] Middlewares
