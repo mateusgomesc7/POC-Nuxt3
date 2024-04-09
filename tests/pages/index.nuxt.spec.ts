@@ -1,5 +1,5 @@
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import Index from "~/pages/index.vue";
 
 describe("Index", () => {
