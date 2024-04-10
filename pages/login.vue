@@ -17,8 +17,8 @@
       </template>
       <template #content>
         <div class="flex flex-col gap-2">
-          <label for="ask">Ask a yes/no question:</label>
-          <InputText
+          <label for="ask">Ask a yes/no question (end with "?"):</label>
+          <InputTextk
             id="ask"
             v-model="question"
             aria-describedby="ask-help"
@@ -26,6 +26,20 @@
           <h3 id="ask-help">
             {{ 'Answer: ' + answer }}
           </h3>
+        </div>
+        <Divider />
+        <div class="flex flex-col">
+          <InputText
+            id="state"
+            v-model="state.someObject.object1"
+          />
+          <!-- <ProgressSpinner
+            animation-duration=".5s"
+          /> -->
+          <ProgressBar
+            :value="`${state.value}`"
+            class="mt-2 h-2"
+          />
         </div>
       </template>
     </Card>
@@ -42,6 +56,12 @@ import { useCounterStore } from '@/stores/counter'
 const question = ref('')
 const answer = ref('yes/no')
 const loading = ref(false)
+const state = reactive({
+  someObject: {
+    object1: '',
+  },
+  value: 0
+})
 const {count} = useCounterStore()
 
 // watch works directly on a ref
@@ -59,4 +79,11 @@ watch(question, async (newQuestion) => {
     }
   }
 })
+
+watch(() => state.someObject, () => {
+  state.value = Math.random() * 100
+  console.log('state changed')
+},{ deep: true })
+
+
 </script>
