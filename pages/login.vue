@@ -18,7 +18,7 @@
       <template #content>
         <div class="flex flex-col gap-2">
           <label for="ask">Ask a yes/no question (end with "?"):</label>
-          <InputTextk
+          <InputText
             id="ask"
             v-model="question"
             aria-describedby="ask-help"
