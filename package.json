@@ -34,6 +34,7 @@
     "eslint": "^8.57.0",
     "jsdom": "^24.0.0",
     "nuxt-primevue": "^0.3.1",
-    "vitest": "^1.4.0"
+    "vitest": "^1.4.0",
+    "vitest-fetch-mock": "^0.2.2"
   }
 }
