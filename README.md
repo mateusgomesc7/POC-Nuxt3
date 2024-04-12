@@ -65,4 +65,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
   - [ ] Stores
   - [x] Middlewares
   - [ ] Computed
-  - [ ] Watch
+  - [x] Watch
