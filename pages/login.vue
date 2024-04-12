@@ -43,6 +43,73 @@
         </div>
       </template>
     </Card>
+    <Card class="mt-2 max-w-lg">
+      <template #content>
+        <div class="flex flex-line justify-between">
+          <div class="flex flex-col gap-2 ">
+            <label for="first-name">Primeiro Nome</label>
+            <InputText
+              id="first-name"
+              v-model="firstName"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label
+              for="last-name"
+            >Último Nome</label>
+            <InputText
+              id="last-name"
+              v-model="lastName"
+            />
+          </div>
+        </div>
+        <Message>{{ fullName }}</Message>
+      </template>
+    </Card>
+    <Card class="mt-2 max-w-lg">
+      <template #content>
+        <div class="flex flex-col gap-8">
+          <label>Autor: {{ author.name }}</label>
+          <div class="flex flex-row gap-5">
+            <FloatLabel>
+              <InputText
+                id="add-livro"
+                v-model="livro"
+              />
+              <label for="add-livro">Novo Livro</label>
+            </FloatLabel>
+            <Button
+              label="Add"
+              @click="adicionarNovoLivro"
+            />
+          </div>
+          <div class="card flex flex-col gap-5 justify-content-center">
+            <Listbox
+              v-model="booksWrited"
+              :options="books"
+              multiple
+              option-label="title"
+              class="w-full md:w-14rem"
+            >
+              <template #option="slotOption">
+                <div class="flex flex-row justify-between items-center">
+                  <span>{{ slotOption.option.title }}</span>
+                  <Button
+                    label="X"
+                    @click="removerLivro(slotOption.index)"
+                  />
+                </div>
+              </template>
+            </Listbox>
+            <Button
+              label="Select"
+              @click="adicionarLivroEscritoPorAutor"
+            />
+          </div>
+          <p>{{ publishedBooksMessage }}</p>
+        </div>
+      </template>
+    </Card>
   </div>
 </template>
 
@@ -56,13 +123,49 @@ import { useCounterStore } from '@/stores/counter'
 const question = ref('')
 const answer = ref('yes/no')
 const loading = ref(false)
+const firstName = ref('Mateus')
+const lastName = ref('Gomes')
+const books = ref([])
+const booksWrited = ref([])
+const livro = ref('')
 const state = reactive({
   someObject: {
     object1: '',
   },
   value: 0
 })
+
 const {count} = useCounterStore()
+
+const fullName = computed(() => {
+  return `${firstName.value} ${lastName.value}`;
+});
+
+const publishedBooksMessage = computed(() => {
+  return author.books.length > 3 ? 'Autor Desenrolado' : 'Autor precisa se esforçar mais'
+})
+
+const author = reactive({
+  name: fullName,
+  books: []
+})
+
+const adicionarNovoLivro = () => {
+  books.value.push({ title: livro.value })
+  livro.value = ''
+}
+
+const removerLivro = (book) => {
+  books.value = books.value.filter((_, index) => index !== book)
+}
+
+const adicionarLivroEscritoPorAutor = () => {
+  booksWrited.value.forEach(book => {
+    if (!author.books.includes(book))
+      author.books.push(book)
+  })
+  booksWrited.value = []
+}
 
 watch(question, async (newQuestion) => {
   if (newQuestion.includes('?')) {

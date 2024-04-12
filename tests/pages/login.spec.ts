@@ -56,4 +56,14 @@ describe("Page login", () => {
       expect(wrapper.vm.state.value).toEqual(10);
     });
   });
+  describe("Computed", () => {
+    it("Testando computed", async () => {
+      wrapper.vm.firstName.value = "John";
+      wrapper.vm.lastName.value = "Eita";
+
+      await flushPromises();
+
+      expect(wrapper.vm.fullName).toEqual("John Eita");
+    });
+  });
 });
