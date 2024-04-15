@@ -57,13 +57,56 @@ describe("Page login", () => {
     });
   });
   describe("Computed", () => {
-    it("Testando computed", async () => {
+    it("should compose the FullName value", async () => {
       wrapper.vm.firstName.value = "John";
       wrapper.vm.lastName.value = "Eita";
 
       await flushPromises();
 
       expect(wrapper.vm.fullName).toEqual("John Eita");
+    });
+    it("should set the publishedBooksMessage value when the book quantity is lower equals than 3", async () => {
+      wrapper.vm.author.books = [{ title: "New Book" }];
+
+      await flushPromises();
+
+      expect(wrapper.vm.publishedBooksMessage).toEqual(
+        "Autor precisa se esforçar mais"
+      );
+    });
+    it("should set the publishedBooksMessage value when the book quantity is greater than 3", async () => {
+      wrapper.vm.author.books = [
+        { title: "New Book1" },
+        { title: "New Book2" },
+        { title: "New Book3" },
+        { title: "New Book4" },
+      ];
+
+      await flushPromises();
+
+      expect(wrapper.vm.publishedBooksMessage).toEqual("Autor Desenrolado");
+    });
+  });
+  describe("Methods", () => {
+    it("should add a new book to the list", async () => {
+      wrapper.vm.livro.value = "New Book";
+      wrapper.vm.adicionarNovoLivro();
+      expect(wrapper.vm.books.value).toContainEqual({ title: "New Book" });
+      expect(wrapper.vm.books.value).toHaveLength(1);
+    });
+    it("should select a book to author", async () => {
+      wrapper.vm.livro.value = "New Book";
+      wrapper.vm.adicionarNovoLivro();
+      wrapper.vm.selecionarLivroParaAutor(0);
+      expect(wrapper.vm.author.books).toContainEqual({ title: "New Book" });
+      expect(wrapper.vm.author.books).toHaveLength(1);
+    });
+    it("should remove a book from the list", async () => {
+      wrapper.vm.livro.value = "New Book";
+      wrapper.vm.adicionarNovoLivro();
+      wrapper.vm.removerLivro(0);
+      expect(wrapper.vm.books.value).toHaveLength(0);
+      expect(wrapper.vm.author.books).toHaveLength(0);
     });
   });
 });

@@ -103,10 +103,11 @@
             </Listbox>
             <Button
               label="Select"
-              @click="adicionarLivroEscritoPorAutor"
+              @click="selecionarLivroParaAutor"
             />
           </div>
           <p>{{ publishedBooksMessage }}</p>
+          <p>{{ author.books }}</p>
         </div>
       </template>
     </Card>
@@ -156,15 +157,21 @@ const adicionarNovoLivro = () => {
 }
 
 const removerLivro = (book) => {
+  removerLivroDeAutor(books.value[book])
   books.value = books.value.filter((_, index) => index !== book)
 }
 
-const adicionarLivroEscritoPorAutor = () => {
-  booksWrited.value.forEach(book => {
+const removerLivroDeAutor = (book) => {
+  console.log(book)
+  author.books = author.books.filter(b => b !== book)
+  publishedBooksMessage
+}
+
+const selecionarLivroParaAutor = () => {
+  books.value.forEach(book => {
     if (!author.books.includes(book))
       author.books.push(book)
   })
-  booksWrited.value = []
 }
 
 watch(question, async (newQuestion) => {
